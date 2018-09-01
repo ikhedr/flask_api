@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-import dill as pickle
+import pickle
 from flask import Flask, jsonify, request
 from utils import PreProcessing
 
