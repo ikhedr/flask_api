@@ -1,0 +1,25 @@
+  A) Deploying scalable ML algorithm: 
+    https://medium.com/zendesk-engineering/how-zendesk-serves-tensorflow-models-in-production-751ee22f0f4b
+
+  B) Serialize/deserialize your mode:
+    https://stackabuse.com/scikit-learn-save-and-restore-models/
+    http://www.benfrederickson.com/dont-pickle-your-data/
+    Better approach- use JSON: 
+        pickling Python objects via the pickle, dill or joblib modules is probably the most convenient approach to model persistence. 
+        However, pickling Python objects can sometimes be a little bit problematic, 
+        for example, deserializing a model in Python 3.x that was originally pickled in Python 2.7x and vice versa. 
+        Also, pickle offers different protocols (currently the protocols 0-4), which are not necessarily backwards compatible. 
+        Thus, to prepare for the worst case scenario -- corrupted pickle files or version incompatibilities -- 
+        there's at least one other (a little bit more tedious) way to model persistence using JSON
+        
+        http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/bonus/scikit-model-to-json.ipynb
+
+  => MessagePack to serialize data: https://stackoverflow.com/questions/43442194/how-do-i-read-and-write-with-msgpack
+  
+  
+  ------------------------------------------------------------------------------------------------------------------
+  
+  1. Issue with pickle/joblib
+      a. Python version compatibility (it is not recommended to (de)serialize objects across different Python versions)
+      b. Model compatibility (The internal structure of the model needs to stay unchanged between save and reload.)
+      c. security (Both tools could contain malicious code, so it is not recommended to restore data from untrusted or unauthenticated sources)
