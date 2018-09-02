@@ -18,6 +18,9 @@
   
   C) Increamental learning: retraining the model over time:
       https://datascience.stackexchange.com/questions/23789/why-do-we-need-xgboost-and-random-forest
+      https://stackoverflow.com/questions/44060432/incremental-training-of-random-forest-model-using-python-sklearn
+      
+      
   ------------------------------------------------------------------------------------------------------------------
   
   1. Issue with pickle/joblib
