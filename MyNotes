@@ -16,7 +16,8 @@
 
   => MessagePack to serialize data: https://stackoverflow.com/questions/43442194/how-do-i-read-and-write-with-msgpack
   
-  
+  C) Increamental learning: retraining the model over time:
+      https://datascience.stackexchange.com/questions/23789/why-do-we-need-xgboost-and-random-forest
   ------------------------------------------------------------------------------------------------------------------
   
   1. Issue with pickle/joblib
