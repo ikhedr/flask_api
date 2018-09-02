@@ -1,0 +1,21 @@
+db.createUser({
+	user:"datta",
+	pwd:"1234",
+	roles:["readWrite","dbAdmin"]
+});
+
+{
+	first_name:"Datta",
+	last_name:"Ikhe",
+	memberships:["club","gym"],
+	address:{
+		street:"a1",
+		city:"Pune"
+	},
+	contacts:[
+		{name:"Rajaram",relation:"Father"},
+		{name:"Santosh",relation:"Brother"}
+	]
+}
+
+
